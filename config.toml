@@ -1,8 +1,10 @@
-baseURL = "https://0t2.github.io/blog/"
+baseURL = "https://blog.0t2.me"
 languageCode = "en-us"
 title = "投石問路"
 theme = "hugo-theme-bootstrap4-blog"
 
+googleAnalytics = "UA-67143684-2"
+disqusShortname = "0t2"
 
 [permalinks]
   post = "/:year/:month/:title/"
