@@ -1,0 +1,17 @@
+baseURL = "https://0t2.github.io/blog/"
+languageCode = "en-us"
+title = "投石問路"
+theme = "hugo-theme-bootstrap4-blog"
+
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+
+[params]
+  # Site author
+  author = "Jesse Chen"
+
+  # Description/subtitle for homepage (can be Markdown)
+  description = "在&mdash;通往成功的下水道"
+
