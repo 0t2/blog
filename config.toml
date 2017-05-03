@@ -1,4 +1,4 @@
-baseURL = "https://blog.0t2.me"
+baseURL = "https://blog.0t2.me/"
 languageCode = "en-us"
 title = "投石問路"
 theme = "hugo-theme-bootstrap4-blog"
