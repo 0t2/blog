@@ -6,10 +6,25 @@
     <description>Recent content on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 May 2017 09:35:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 May 2017 11:08:14 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 Hugo 前的準備工作</title>
+      <link>https://blog.0t2.me/2017/05/%E4%BD%BF%E7%94%A8-hugo-%E5%89%8D%E7%9A%84%E6%BA%96%E5%82%99%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Thu, 04 May 2017 11:08:14 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/%E4%BD%BF%E7%94%A8-hugo-%E5%89%8D%E7%9A%84%E6%BA%96%E5%82%99%E5%B7%A5%E4%BD%9C/</guid>
+      <description>&lt;h3 id=&#34;環境&#34;&gt;環境&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://msdn.microsoft.com/zh-tw/commandline/wsl/about&#34;&gt;Bash on ubuntu on Windows&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>再一次，重新出發!</title>

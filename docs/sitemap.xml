@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0t2.me/2017/05/%E4%BD%BF%E7%94%A8-hugo-%E5%89%8D%E7%9A%84%E6%BA%96%E5%82%99%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2017-05-04T11:08:14+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.0t2.me/2017/05/%E5%86%8D%E4%B8%80%E6%AC%A1%E9%87%8D%E6%96%B0%E5%87%BA%E7%99%BC/</loc>
     <lastmod>2017-05-03T09:35:13+08:00</lastmod>
   </url>
@@ -13,7 +18,7 @@
   
   <url>
     <loc>https://blog.0t2.me/post/</loc>
-    <lastmod>2017-05-03T09:35:13+08:00</lastmod>
+    <lastmod>2017-05-04T11:08:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -24,7 +29,7 @@
   
   <url>
     <loc>https://blog.0t2.me/</loc>
-    <lastmod>2017-05-03T09:35:13+08:00</lastmod>
+    <lastmod>2017-05-04T11:08:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
