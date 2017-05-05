@@ -6,10 +6,21 @@
     <description>Recent content on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 May 2017 11:08:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 May 2017 13:54:40 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用 Hugo 建立你的部落格 - 1</title>
+      <link>https://blog.0t2.me/2017/05/%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---1/</link>
+      <pubDate>Fri, 05 May 2017 13:54:40 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---1/</guid>
+      <description>&lt;h3 id=&#34;詳細可參考-hugo-quickstart-guide&#34;&gt;詳細可參考: &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;Hugo Quickstart Guide&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>使用 Hugo 前的準備工作</title>
