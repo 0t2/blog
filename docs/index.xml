@@ -6,10 +6,21 @@
     <description>Recent content on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2017 13:54:40 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 May 2017 15:05:24 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用 Hugo 建立你的部落格 - 2</title>
+      <link>https://blog.0t2.me/2017/05/%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---2/</link>
+      <pubDate>Sat, 06 May 2017 15:05:24 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---2/</guid>
+      <description>&lt;h3 id=&#34;使用-github-pages&#34;&gt;使用 &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>用 Hugo 建立你的部落格 - 1</title>
