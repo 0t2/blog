@@ -6,10 +6,27 @@
     <description>Recent content in Posts on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 May 2017 15:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 May 2017 14:06:34 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular 4 環境準備</title>
+      <link>https://blog.0t2.me/2017/05/angular-4-%E7%92%B0%E5%A2%83%E6%BA%96%E5%82%99/</link>
+      <pubDate>Sun, 07 May 2017 14:06:34 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/angular-4-%E7%92%B0%E5%A2%83%E6%BA%96%E5%82%99/</guid>
+      <description>&lt;h5 id=&#34;編輯器&#34;&gt;編輯器&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://msdn.microsoft.com/zh-tw/commandline/wsl/about&#34;&gt;Bash on Windows&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;: 建議透過 &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;nvm&lt;/a&gt; 安裝&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cli.angular.io/&#34;&gt;Angular CLI&lt;/a&gt;: &lt;code&gt;npm install -g @angular/cli&lt;/code&gt;</description>
+    </item>
     
     <item>
       <title>用 Hugo 建立你的部落格 - 2</title>
