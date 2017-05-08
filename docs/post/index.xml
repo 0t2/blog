@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 May 2017 14:06:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 May 2017 10:37:44 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular: 從做中學 - 1</title>
+      <link>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---1/</link>
+      <pubDate>Mon, 08 May 2017 10:37:44 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---1/</guid>
+      <description>&lt;h4 id=&#34;寫點東西當筆記&#34;&gt;寫點東西當筆記&lt;/h4&gt;
+
+&lt;p&gt;網路上有很多 Angular 的教學文章和影片，照著做都懂，但自己要動手卻又好像少了點什麼。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular 4 環境準備</title>
