@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="在 Angular CLI 中使用 Yarn" />
+<meta property="og:description" content="遠離 npm，多寫幾行 code
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.0t2.me/2017/05/%E5%9C%A8-angular-cli-%E4%B8%AD%E4%BD%BF%E7%94%A8-yarn/" />
+
+
+
+<meta property="article:published_time" content="2017-05-09T13:39:15&#43;08:00"/>
+<meta property="article:modified_time" content="2017-05-09T13:39:15&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="在 Angular CLI 中使用 Yarn"/>
+<meta name="twitter:title" content="在 Angular CLI 中使用 Yarn"/>
+<meta name="twitter:description" content="遠離 npm，多寫幾行 code
+
+"/>
+
+<meta name="generator" content="Hugo 0.20.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "在 Angular CLI 中使用 Yarn",
+  "url": "https://blog.0t2.me/2017/05/%E5%9C%A8-angular-cli-%E4%B8%AD%E4%BD%BF%E7%94%A8-yarn/",
+  "wordCount": "145",
+  "datePublished": "2017-05-09T13:39:15&#43;08:00",
+  "dateModified": "2017-05-09T13:39:15&#43;08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Jesse Chen"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.0t2.me/2017/05/%E5%9C%A8-angular-cli-%E4%B8%AD%E4%BD%BF%E7%94%A8-yarn/">
+
+    <title>在 Angular CLI 中使用 Yarn | 投石問路</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://blog.0t2.me/css/style.css" rel="stylesheet" integrity="sha384-j3n8sYdzztDYtVc80KiiuOXoCg5Bjz0zYyLGzDMW8RbfA0u5djbF0GO3bVOPoLyN" crossorigin="anonymous">
+
+    
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-67143684-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://blog.0t2.me/">Home</a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://blog.0t2.me/" rel="home">投石問路</a></h1>
+        <p class="lead blog-description">在&mdash;通往成功的下水道</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://blog.0t2.me/2017/05/%E5%9C%A8-angular-cli-%E4%B8%AD%E4%BD%BF%E7%94%A8-yarn/">在 Angular CLI 中使用 Yarn</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-05-09T13:39:15&#43;08:00">Tue May 9, 2017</time> by Jesse Chen</p>
+  </header>
+  <h4 id="遠離-npm-多寫幾行-code">遠離 npm，多寫幾行 code</h4>
+
+<p></p>
+
+<p>每當用 Angular CLI 建立新專案的時候，會需要透過 <code>npm</code> 下載一堆相依套件。<br />
+這個過程其實是可以加速的，因為 <code>npm</code> 並沒有緩存的機制，所以每次都是全部重新下載。<br />
+將 <code>npm</code> 換成 <code>Yarn</code> 的話，第一次的下載時間還是在，但第二次就能明顯感受到 <code>Yarn</code> 的效果。</p>
+
+<h4 id="安裝-yarn">安裝 Yarn</h4>
+
+<ul>
+<li><a href="https://yarnpkg.com/zh-Hans/">下載 Yarn</a></li>
+</ul>
+
+<p>因為我是用 <a href="https://msdn.microsoft.com/zh-tw/commandline/wsl/about">Bash on Windows</a>，所以是安裝在 <code>Ubuntu</code> 上。</p>
+
+<pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update &amp;&amp; sudo apt-get install yarn
+</code></pre>
+
+<p>檢查安裝是否成功: <code>yarn --version</code></p>
+
+<h4 id="修改-angular-cli-設定">修改 Angular CLI 設定</h4>
+
+<pre><code>ng set --global packageManager=yarn
+</code></pre>
+
+<blockquote>
+<p>如果想要改回使用 npm <code>ng set --global packageManager=npm</code></p>
+</blockquote>
+
+<h4 id="測試">測試</h4>
+
+<h5 id="round-1">Round 1</h5>
+
+<pre><code>time ng new test-yarn1
+......
+......
+Successfully initialized git.
+Installing packages for tooling via yarn.
+Installed packages for tooling via yarn.
+Project 'test-yarn1' successfully created.
+
+real    4m49.727s
+user    0m44.438s
+sys     1m1.828s
+</code></pre>
+
+<p>建立新專案在我的電腦要跑到快五分鐘&hellip;<del>(換換病發作)</del></p>
+
+<ol>
+<li>先確認 Angular CLI 已經使用 Yarn 來安裝套件。<br /></li>
+<li>第一次使用 Yarn 還是要下載套件，但是 Yarn 會建立緩存，讓下次的安裝更快。</li>
+</ol>
+
+<h5 id="round-2">Round 2</h5>
+
+<pre><code>time ng new test-yarn2
+......
+......
+Project 'test-yarn2' successfully created.
+
+real    2m38.259s
+user    0m27.578s
+sys     0m39.875s
+</code></pre>
+
+<p>第二次只要約兩分半，從這裡就可以看到 <code>Yarn</code> 的效果囉。</p>
+
+<h4 id="參考資料">參考資料:</h4>
+
+<ul>
+<li><a href="https://github.com/angular/angular-cli/issues/3886">Tracking: Third party NPM replacements #3886</a></li>
+</ul>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E5%259C%25A8-angular-cli-%25E4%25B8%25AD%25E4%25BD%25BF%25E7%2594%25A8-yarn%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E5%259C%25A8-angular-cli-%25E4%25B8%25AD%25E4%25BD%25BF%25E7%2594%25A8-yarn%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E5%259C%25A8-angular-cli-%25E4%25B8%25AD%25E4%25BD%25BF%25E7%2594%25A8-yarn%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E5%259C%25A8-angular-cli-%25E4%25B8%25AD%25E4%25BD%25BF%25E7%2594%25A8-yarn%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = '0t2';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 offset-sm-1 blog-sidebar">
+  
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

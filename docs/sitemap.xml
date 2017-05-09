@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0t2.me/2017/05/%E5%9C%A8-angular-cli-%E4%B8%AD%E4%BD%BF%E7%94%A8-yarn/</loc>
+    <lastmod>2017-05-09T13:39:15+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---1/</loc>
     <lastmod>2017-05-08T10:37:44+08:00</lastmod>
   </url>
@@ -38,7 +43,7 @@
   
   <url>
     <loc>https://blog.0t2.me/post/</loc>
-    <lastmod>2017-05-08T10:37:44+08:00</lastmod>
+    <lastmod>2017-05-09T13:39:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -49,7 +54,7 @@
   
   <url>
     <loc>https://blog.0t2.me/</loc>
-    <lastmod>2017-05-08T10:37:44+08:00</lastmod>
+    <lastmod>2017-05-09T13:39:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
