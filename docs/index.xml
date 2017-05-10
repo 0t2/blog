@@ -6,10 +6,21 @@
     <description>Recent content on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 May 2017 13:39:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 May 2017 09:32:59 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular: 從做中學 - 2</title>
+      <link>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---2/</link>
+      <pubDate>Wed, 10 May 2017 09:32:59 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---2/</guid>
+      <description>&lt;h3 id=&#34;component-component-and-component&#34;&gt;Component, Component and Component!&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>在 Angular CLI 中使用 Yarn</title>
