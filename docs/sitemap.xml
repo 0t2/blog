@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/</loc>
+    <lastmod>2017-05-11T10:00:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---2/</loc>
     <lastmod>2017-05-10T09:32:59+08:00</lastmod>
   </url>
@@ -48,7 +53,7 @@
   
   <url>
     <loc>https://blog.0t2.me/post/</loc>
-    <lastmod>2017-05-10T09:32:59+08:00</lastmod>
+    <lastmod>2017-05-11T10:00:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://blog.0t2.me/</loc>
-    <lastmod>2017-05-10T09:32:59+08:00</lastmod>
+    <lastmod>2017-05-11T10:00:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 May 2017 09:32:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 May 2017 10:00:12 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>修改 Grub2 開機順序</title>
+      <link>https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/</link>
+      <pubDate>Thu, 11 May 2017 10:00:12 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/</guid>
+      <description>&lt;h3 id=&#34;windows-10-first&#34;&gt;Windows 10 First&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular: 從做中學 - 2</title>

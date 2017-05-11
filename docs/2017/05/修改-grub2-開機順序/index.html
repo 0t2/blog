@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="修改 Grub2 開機順序" />
+<meta property="og:description" content="Windows 10 First
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/" />
+
+
+
+<meta property="article:published_time" content="2017-05-11T10:00:12&#43;08:00"/>
+<meta property="article:modified_time" content="2017-05-11T10:00:12&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="修改 Grub2 開機順序"/>
+<meta name="twitter:title" content="修改 Grub2 開機順序"/>
+<meta name="twitter:description" content="Windows 10 First
+
+"/>
+
+<meta name="generator" content="Hugo 0.20.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "修改 Grub2 開機順序",
+  "url": "https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/",
+  "wordCount": "56",
+  "datePublished": "2017-05-11T10:00:12&#43;08:00",
+  "dateModified": "2017-05-11T10:00:12&#43;08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Jesse Chen"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/">
+
+    <title>修改 Grub2 開機順序 | 投石問路</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://blog.0t2.me/css/style.css" rel="stylesheet" integrity="sha384-j3n8sYdzztDYtVc80KiiuOXoCg5Bjz0zYyLGzDMW8RbfA0u5djbF0GO3bVOPoLyN" crossorigin="anonymous">
+
+    
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-67143684-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://blog.0t2.me/">Home</a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://blog.0t2.me/" rel="home">投石問路</a></h1>
+        <p class="lead blog-description">在&mdash;通往成功的下水道</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://blog.0t2.me/2017/05/%E4%BF%AE%E6%94%B9-grub2-%E9%96%8B%E6%A9%9F%E9%A0%86%E5%BA%8F/">修改 Grub2 開機順序</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-05-11T10:00:12&#43;08:00">Thu May 11, 2017</time> by Jesse Chen</p>
+  </header>
+  <h3 id="windows-10-first">Windows 10 First</h3>
+
+<p></p>
+
+<p>這是我的開機選單</p>
+
+<pre><code>*Ubuntu
+ Advanced options for Ubuntu
+ Windows 10 (loader) (on /dev/sda1)
+</code></pre>
+
+<ul>
+<li>如果你跟我一樣，裝了雙系統，但是大部分工作還是在 Windows 上完成<br /></li>
+<li>覺得每次開機都要選很煩，想修改成從 Windows 開機</li>
+</ul>
+
+<h4 id="steps">Steps</h4>
+
+<ol>
+<li>打開 <code>Terminal</code></li>
+
+<li><p>備份 <code>grub</code> 檔:</p>
+
+<pre><code>sudo cp /etc/default/grup /etc/default/grup.bak
+</code></pre></li>
+
+<li><p>修改 Grub 設定</p>
+
+<pre><code>sudo vim /etc/default/grup
+</code></pre></li>
+
+<li><p>找到 <code>GRUB_DEFAULT=0</code>，索引是從 0 開始，以我的開機選單為例，0 就是 Ubuntu</p></li>
+
+<li><p>修改 <code>GRUB_DEFAULT</code> 的值 &amp; 存檔。以我的開機選單為例，改成 <code>GRUB_DEFAULT=2</code>，就會從 Windows 10 開機</p></li>
+
+<li><p>最後不要忘記更新 Grub</p>
+
+<pre><code>sudo update-grup
+</code></pre></li>
+
+<li><p>重開機看是否有修改成功!</p></li>
+</ol>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E4%25BF%25AE%25E6%2594%25B9-grub2-%25E9%2596%258B%25E6%25A9%259F%25E9%25A0%2586%25E5%25BA%258F%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E4%25BF%25AE%25E6%2594%25B9-grub2-%25E9%2596%258B%25E6%25A9%259F%25E9%25A0%2586%25E5%25BA%258F%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E4%25BF%25AE%25E6%2594%25B9-grub2-%25E9%2596%258B%25E6%25A9%259F%25E9%25A0%2586%25E5%25BA%258F%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2f%25E4%25BF%25AE%25E6%2594%25B9-grub2-%25E9%2596%258B%25E6%25A9%259F%25E9%25A0%2586%25E5%25BA%258F%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = '0t2';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 offset-sm-1 blog-sidebar">
+  
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>
