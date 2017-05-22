@@ -6,10 +6,21 @@
     <description>Recent content on 投石問路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 May 2017 11:41:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 May 2017 10:41:30 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.0t2.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular: 從做中學 - 5</title>
+      <link>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/</link>
+      <pubDate>Mon, 22 May 2017 10:41:30 +0800</pubDate>
+      
+      <guid>https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/</guid>
+      <description>&lt;h3 id=&#34;使用者輸入&#34;&gt;使用者輸入&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular: 從做中學 - 4</title>

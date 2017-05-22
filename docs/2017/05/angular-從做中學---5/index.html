@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Angular: 從做中學 - 5" />
+<meta property="og:description" content="使用者輸入
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/" />
+
+
+
+<meta property="article:published_time" content="2017-05-22T10:41:30&#43;08:00"/>
+<meta property="article:modified_time" content="2017-05-22T10:41:30&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Angular: 從做中學 - 5"/>
+<meta name="twitter:title" content="Angular: 從做中學 - 5"/>
+<meta name="twitter:description" content="使用者輸入
+
+"/>
+
+<meta name="generator" content="Hugo 0.20.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Angular: 從做中學 - 5",
+  "url": "https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/",
+  "wordCount": "91",
+  "datePublished": "2017-05-22T10:41:30&#43;08:00",
+  "dateModified": "2017-05-22T10:41:30&#43;08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Jesse Chen"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/">
+
+    <title>Angular: 從做中學 - 5 | 投石問路</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://blog.0t2.me/css/style.css" rel="stylesheet" integrity="sha384-j3n8sYdzztDYtVc80KiiuOXoCg5Bjz0zYyLGzDMW8RbfA0u5djbF0GO3bVOPoLyN" crossorigin="anonymous">
+
+    
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-67143684-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://blog.0t2.me/">Home</a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://blog.0t2.me/" rel="home">投石問路</a></h1>
+        <p class="lead blog-description">在&mdash;通往成功的下水道</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://blog.0t2.me/2017/05/angular-%E5%BE%9E%E5%81%9A%E4%B8%AD%E5%AD%B8---5/">Angular: 從做中學 - 5</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-05-22T10:41:30&#43;08:00">Mon May 22, 2017</time> by Jesse Chen</p>
+  </header>
+  <h3 id="使用者輸入">使用者輸入</h3>
+
+<p></p>
+
+<h4 id="透過-input-新增-todo">透過 <code>input</code> 新增 Todo</h4>
+
+<p>目標:</p>
+
+<ol>
+<li>在 input 新增 todo</li>
+<li>按下 Enter 後，將 todo 加入 todos 陣列</li>
+<li>清空 input</li>
+</ol>
+
+<p>首先在 <code>AppComponent</code> 中加上一個 <code>addTodo</code> 的方法。</p>
+
+<pre><code>addTodo(value: string) {
+  if (value &amp;&amp; value.trim())
+    this.todos.push(value);
+}
+</code></pre>
+
+<p><code>addTodo</code> 做的事情很單純</p>
+
+<ol>
+<li>收到一個 <code>value</code></li>
+<li>檢查 <code>value</code> 是否為空</li>
+<li>將 <code>value</code> 放進 todos 陣列</li>
+</ol>
+
+<p>在 <code>app.component.html</code> 新增一個 <code>input</code></p>
+
+<pre><code>&lt;input #todoInput (keyup.enter)=&quot;addTodo(todoInput.value); todoInput.value = ''&quot;&gt;
+</code></pre>
+
+<p><code>#todoInput</code> 可以理解成給 input 一個參考的名稱，更方便的操作 input 的屬性。</p>
+
+<p>跟<a href="../../../../2017/05/angular-從做中學---4/">上一篇</a>提到的一樣，這邊對 input 的 <code>keyup.enter</code> 事件，與 addTodo 做綁定，
+並且將 <code>todoInput</code> 的值傳給 addTodo。<br />
+而後面的 <code>todoInput.value = ''</code> 則是在新增 todo 的同時，將 <code>todoInput</code> 給清空。</p>
+
+<p>打開網頁看看目前的結果吧</p>
+
+<ul>
+<li><a href="https://github.com/0t2/ng-todo">Github</a></li>
+<li><a href="https://github.com/0t2/ng-todo/commit/d40d1c522bf467cf544718ed0324d10193849bac">Commit for this post</a></li>
+</ul>
+
+<p>簡單的教學就寫到這邊，想了解更多的可以參考 <a href="https://angular.io/docs/ts/latest/">ANGULAR DOCS</a> 喔!</p>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2fangular-%25E5%25BE%259E%25E5%2581%259A%25E4%25B8%25AD%25E5%25AD%25B8---5%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2fangular-%25E5%25BE%259E%25E5%2581%259A%25E4%25B8%25AD%25E5%25AD%25B8---5%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2fangular-%25E5%25BE%259E%25E5%2581%259A%25E4%25B8%25AD%25E5%25AD%25B8---5%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fblog.0t2.me%2f2017%2f05%2fangular-%25E5%25BE%259E%25E5%2581%259A%25E4%25B8%25AD%25E5%25AD%25B8---5%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+  
+  
+  if (window.location.hostname == "localhost")
+    return;
+
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = '0t2';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 offset-sm-1 blog-sidebar">
+  
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>
